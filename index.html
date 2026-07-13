@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>SERVEASE Mobile Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="phone-frame">
+  <main class="phone-shell auth-active" aria-label="SERVEASE mobile app prototype">
+    <section id="login" class="screen auth-screen active" data-screen="login">
+      <div class="login-panel">
+          <div class="logo-login-clean">
+            <img src="servease-logo.png" alt="SERVEASE">
+          </div>
+      <div class="login-card">
+        <h1 class="login-title">Login</h1>
+        <p class="login-subtitle">Temukan teknisi rumah terpercaya</p>
+        <label class="field-label">Email
+          <input id="loginEmail" type="email" placeholder="nama@email.com" />
+        </label>
+        <label class="field-label">Password
+          <input id="loginPassword" type="password" placeholder="Masukkan password" />
+        </label>
+
+        <button class="login-button" type="button" id="loginButton">Login</button>
+        <small> Dapat login tanpa mengisi email dan password.</small>
+      </div>
+      </div>
+    </section>
+
+    <section id="home" class="screen" data-screen="home">
+      <header class="topbar">
+        <div class="brand-group">
+          <div class="logo-mark">
+            <img src="servease-logo.png" alt="SERVEASE">
+          </div>
+          <div>
+            <div class="brand">SERVEASE</div>
+            <button class="location-chip" type="button">📍 Jakarta, Bogor</button>
+          </div>
+        </div>
+        <button class="icon-btn" type="button" aria-label="Notifikasi">🔔</button>
+      </header>
+
+      <label class="search-wrap">
+        <span>🔎</span>
+        <input type="search" placeholder="Cari layanan... (AC, Listrik, Plumbing)" />
+      </label>
+      
+      <aside class="promo-card">
+        <div>
+          <strong>Booking pertama GRATIS service fee!</strong>
+          <p>Pilih teknisi terverifikasi di sekitar lokasi Anda.</p>
+        </div>
+        <span>🎁</span>
+      </aside>
+
+      <section class="section">
+        <h2>Kategori Layanan</h2>
+        <div class="category-grid">
+          <button class="category-card" data-category="AC" type="button"><span>❄️</span>AC</button>
+          <button class="category-card" data-category="Listrik" type="button"><span>⚡</span>Listrik</button>
+          <button class="category-card" data-category="Plumbing" type="button"><span>💧</span>Plumbing</button>
+          <button class="category-card" data-category="Pertukangan" type="button"><span>🔨</span>Tukang</button>
+          <button class="category-card" data-category="Cat" type="button"><span>🖌️</span>Cat</button>
+          <button class="category-card" data-category="Elektronik" type="button"><span>🔌</span>Elektronik</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title-row">
+          <h2>Teknisi Terdekat</h2>
+          <button type="button" data-nav-target="search">Lihat semua</button>
+        </div>
+        <div class="nearby-scroll">
+          <article class="nearby-card">
+            <div class="avatar yellow">
+             <img src="images/budi.jpeg" alt="BUDI"> 
+            </div>
+            <h3>Pak Budi</h3>
+            <p class="verified">✓ Verified</p>
+            <p>★★★★★ 4.9</p>
+            <p>Spesialis AC</p>
+            <strong>Mulai Rp 75.000</strong>
+            <button type="button" data-profile="Pak Budi">Pesan</button>
+          </article>
+          <article class="nearby-card">
+            <div class="avatar rose">
+              <img src="images/dewi.jpeg" alt="">
+            </div>
+            <h3>Bu Dewi</h3>
+            <p class="verified">✓ Verified</p>
+            <p>★★★★☆ 4.7</p>
+            <p>Instalasi listrik</p>
+            <strong>Mulai Rp 100.000</strong>
+            <button type="button" data-profile="Bu Dewi">Pesan</button>
+          </article>
+          <article class="nearby-card">
+            <div class="avatar teal">
+              <img src="images/hendra.jpeg" alt="">
+            </div>
+            <h3>Pak Hendra</h3>
+            <p class="verified">✓ Verified</p>
+            <p>★★★★★ 4.8</p>
+            <p>Plumbing rumah</p>
+            <strong>Mulai Rp 120.000</strong>
+            <button type="button" data-profile="Pak Hendra">Pesan</button>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section id="search" class="screen" data-screen="search">
+      <div class="sticky-search">
+        <label class="search-wrap compact">
+          <span>🔎</span>
+          <input id="technicianSearch" type="search" placeholder="Cari teknisi atau layanan" />
+        </label>
+        <div class="filter-row" aria-label="Filter teknisi">
+          <button class="filter-chip active" data-filter="Semua" type="button">Semua</button>
+          <button class="filter-chip" data-filter="AC" type="button">AC</button>
+          <button class="filter-chip" data-filter="Listrik" type="button">Listrik</button>
+          <button class="filter-chip" data-filter="Plumbing" type="button">Plumbing</button>
+          <button class="filter-chip" data-filter="Rating Tertinggi" type="button">Rating Tertinggi</button>
+          <button class="filter-chip" data-filter="Harga Terendah" type="button">Harga Terendah</button>
+        </div>
+      </div>
+
+      <section class="technician-list" aria-live="polite">
+        <article class="tech-card" data-tags="AC" data-name="Pak Budi">
+          <div class="avatar yellow">
+            <img src="images/budi.jpeg">
+          </div>
+          <div class="tech-body">
+            <div class="tech-heading">
+              <h3>Pak Budi Wijaya</h3>
+              <span class="badge-blue">VERIFIED</span>
+            </div>
+            <p>4.9 ⭐ | 156 job | 127 ulasan</p>
+            <div class="pill-row"><span>AC Service</span><span>Freon</span><span>Cuci AC</span></div>
+            <p class="muted">Respons &lt; 30 mnt</p>
+            <div class="card-action"><strong>Rp 150.000</strong><button type="button" data-profile="Pak Budi">Lihat Profil</button></div>
+          </div>
+        </article>
+        <article class="tech-card" data-tags="Listrik" data-name="Bu Dewi">
+          <div class="avatar rose">
+            <img src="images/dewi.jpeg">
+          </div>
+          <div class="tech-body">
+            <div class="tech-heading">
+              <h3>Bu Dewi Larasati</h3>
+              <span class="badge-blue">VERIFIED</span>
+            </div>
+            <p>4.7 ⭐ | 89 job | 74 ulasan</p>
+            <div class="pill-row"><span>Listrik</span><span>MCB</span><span>Lampu</span></div>
+            <p class="muted">Respons &lt; 25 mnt</p>
+            <div class="card-action"><strong>Rp 100.000</strong><button type="button" data-profile="Bu Dewi">Lihat Profil</button></div>
+          </div>
+        </article>
+        <article class="tech-card" data-tags="Plumbing" data-name="Pak Hendra">
+          <div class="avatar teal">
+            <img src="images/hendra.jpeg">
+          </div>
+          <div class="tech-body">
+            <div class="tech-heading">
+              <h3>Pak Hendra Saputra</h3>
+              <span class="badge-blue">VERIFIED</span>
+            </div>
+            <p>4.8 ⭐ | 201 job | 143 ulasan</p>
+            <div class="pill-row"><span>Plumbing</span><span>Bocor</span><span>Pompa</span></div>
+            <p class="muted">Respons &lt; 30 mnt</p>
+            <div class="card-action"><strong>Rp 120.000</strong><button type="button" data-profile="Pak Hendra">Lihat Profil</button></div>
+          </div>
+        </article>
+        <article class="tech-card" data-tags="Pertukangan" data-name="Mas Rio">
+          <div class="avatar indigo">
+            <img src="images/rio.jpeg">
+          </div>
+          <div class="tech-body">
+            <div class="tech-heading">
+              <h3>Mas Rio Pratama</h3>
+              <span class="badge-blue">VERIFIED</span>
+            </div>
+            <p>4.6 ⭐ | 67 job | 52 ulasan</p>
+            <div class="pill-row"><span>Pertukangan</span><span>Lemari</span><span>Pintu</span></div>
+            <p class="muted">Respons &lt; 45 mnt</p>
+            <div class="card-action"><strong>Rp 200.000</strong><button type="button" data-profile="Mas Rio">Lihat Profil</button></div>
+          </div>
+        </article>
+        <article class="tech-card" data-tags="Elektronik" data-name="Bu Sari">
+          <div class="avatar green">
+            <img src="images/sari.jpeg">
+          </div>
+          <div class="tech-body">
+            <div class="tech-heading">
+              <h3>Bu Sari Melati</h3>
+              <span class="badge-blue">VERIFIED</span>
+            </div>
+            <p>4.5 ⭐ | 43 job | 38 ulasan</p>
+            <div class="pill-row"><span>Elektronik</span><span>TV</span><span>Mesin cuci</span></div>
+            <p class="muted">Respons &lt; 35 mnt</p>
+            <div class="card-action"><strong>Rp 80.000</strong><button type="button" data-profile="Bu Sari">Lihat Profil</button></div>
+          </div>
+        </article>
+        <article class="tech-card" data-tags="Cat" data-name="Pak Anton">
+          <div class="avatar orange">
+            <img src="images/anton.jpeg">
+          </div>
+          <div class="tech-body">
+            <div class="tech-heading">
+              <h3>Pak Anton Mahendra</h3>
+              <span class="badge-blue">VERIFIED</span>
+            </div>
+            <p>4.8 ⭐ | 112 job | 91 ulasan</p>
+            <div class="pill-row"><span>Cat</span><span>Dinding</span><span>Anti bocor</span></div>
+            <p class="muted">Respons &lt; 40 mnt</p>
+            <div class="card-action"><strong>Rp 180.000</strong><button type="button" data-profile="Pak Anton">Lihat Profil</button></div>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <section id="profile" class="screen detail-screen" data-screen="profile">
+      <header class="detail-header">
+        <button class="back-btn" type="button" data-nav-target="search">←</button>
+        <h1>Provider Detail</h1>
+      </header>
+
+      <article class="provider-card hero-provider">
+        <div class="avatar-photo">
+          <img id="profileImage" src="images/budi.jpg">
+        </div>
+        <div>
+          <h2 id="profileName">Budi Wijaya</h2>
+          <span id="profileSpecialty" class="badge-teal">Tukang AC</span>
+          <p class="stars">★★★★★</p>
+          <p id="profileRating">4.9 • 89 ulasan</p>
+        </div>
+        <span class="badge-blue wide">VERIFIED TEKNISI</span>
+      </article>
+
+      <div class="stats-row">
+        <div><strong id="profileJobs">156</strong><span>Job Selesai</span></div>
+        <div><strong>98%</strong><span>Kepuasan</span></div>
+        <div><strong>&lt; 45 mnt</strong><span>Respons</span></div>
+      </div>
+
+      <section class="section">
+        <h2>Estimasi Harga</h2>
+        <table class="price-table">
+          <tbody>
+            <tr><td>Diagnostic</td><td>Rp 50.000</td></tr>
+            <tr><td>Servis AC standar</td><td>Rp 150.000</td></tr>
+            <tr><td>Isi freon</td><td>Rp 200.000</td></tr>
+            <tr><td>Cuci indoor & outdoor</td><td>Rp 175.000</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="guarantee green">🛡️ <strong>Garansi Pengerjaan 7 Hari</strong></div>
+
+      <section class="section">
+        <h2>Ratings & Reviews</h2>
+        <article class="review-card"><p class="stars">★★★★★</p><strong>Pak Budi sangat profesional dan tepat waktu.</strong><p>AC saya langsung dingin setelah diservice. Recommended!</p><span>- Hana A.</span></article>
+        <article class="review-card"><p class="stars">★★★★★</p><strong>Pengerjaan rapi dan transparan.</strong><p>Biaya sesuai estimasi, teknisinya juga menjelaskan masalahnya dengan jelas.</p><span>- Rina S.</span></article>
+        <article class="review-card"><p class="stars">★★★★☆</p><strong>Cepat datang ke lokasi.</strong><p>Booking pagi, siang sudah selesai. Garansi membuat saya lebih tenang.</p><span>- Harry P.</span></article>
+      </section>
+
+      <button class="fixed-cta" type="button" id="bookNow">Pesan Sekarang — Rp 150.000</button>
+    </section>
+
+    <section id="booking" class="screen detail-screen" data-screen="booking">
+      <header class="detail-header">
+        <button class="back-btn" type="button" data-nav-target="profile">←</button>
+        <h1>Konfirmasi Booking</h1>
+      </header>
+
+      <article class="provider-card compact-provider">
+        <div class="avatar-photo small">
+          <img id="bookingImage" src="images/budi.jpg">
+        </div>
+        <div>
+          <h2 id="bookingName">Budi Wijaya</h2>
+          <span class="badge-teal">Tukang AC</span>
+        </div>
+        <span class="rating-mini">⭐ 4.9</span>
+      </article>
+
+      <section class="section form-section">
+        <h2>Jadwal</h2>
+        <div class="date-row">
+          <button class="slot active" type="button">Hari ini</button>
+          <button class="slot" type="button">Besok</button>
+          <button class="slot" type="button">20 Jun</button>
+        </div>
+        <div class="slot-grid">
+          <button class="slot" type="button">09.00 - 11.00</button>
+          <button class="slot active" type="button">13.00 - 15.00</button>
+          <button class="slot" type="button">16.00 - 18.00</button>
+          <button class="slot" type="button">19.00 - 21.00</button>
+        </div>
+      </section>
+
+      <label class="field-label">Alamat
+        <input type="text" value="Jl. Kemang Raya No. 18, Jakarta Selatan" />
+      </label>
+
+      <section class="breakdown-card">
+        <h2>Rincian Harga</h2>
+        <div><span>Biaya Jasa</span><strong>Rp 150.000</strong></div>
+        <div><span>Biaya Material (estimasi)</span><strong>Rp 50.000</strong></div>
+        <div><span>Service Fee</span><strong>Rp 15.000</strong></div>
+        <div class="total"><span>TOTAL</span><strong>Rp 215.000</strong></div>
+      </section>
+
+      <aside class="info-box">🔒 Pembayaran hanya dicairkan setelah Anda konfirmasi puas. Garansi 7 hari aktif.</aside>
+      <div class="guarantee yellow">🛡️ <strong>7 Day Service Guarantee</strong><span>Garansi jika hasil tidak sesuai</span></div>
+
+      <button class="fixed-cta" type="button" id="confirmBooking">Konfirmasi Booking</button>
+    </section>
+
+    <section id="orders" class="screen" data-screen="orders">
+      <header class="simple-header">
+        <h1>Pesanan Aktif</h1>
+      </header>
+
+      <div class="active-tech-card">
+      <img src="images/budi.jpeg">
+
+      <div class="active-tech-card-info">
+        <h3>Pak Budi</h3>
+        <p>Teknisi AC</p>
+        <span>18 Menit</span>
+      </div>
+      </div>
+
+      <section class="tracker">
+        <div class="step done"><span>✓</span><p>Booking Dikonfirmasi</p></div>
+        <div class="step done"><span>✓</span><p>Teknisi Menuju Lokasi</p></div>
+        <div class="step current"><span>●</span><p>Pengerjaan Berlangsung</p></div>
+        <div class="step"><span>□</span><p>Selesai & Ulasan</p></div>
+      </section>
+
+      <article class="location-card">
+        <h2>Pak Budi</h2>
+        <p>2.3 km dari lokasi Anda | ETA: 18 menit</p>
+        <div class="map-placeholder">📍</div>
+      </article>
+
+      <div class="guarantee green tracking">🛡️ <strong>Garansi Aktif hingga 15 Juli 2026</strong></div>
+
+      <div class="tracking-actions">
+        <button class="outline" type="button">Hubungi Teknisi</button>
+        <button class="outline danger" type="button">Ajukan Komplain</button>
+        <button class="primary" type="button">Konfirmasi Selesai</button>
+      </div>
+    </section>
+
+    <section id="history" class="screen" data-screen="history">
+      <header class="simple-header"><h1>Riwayat Pesanan</h1></header>
+      <div class="history-summary">
+  <div>
+    <strong>12</strong>
+    <span>Total Pesanan</span>
+  </div>
+
+  <div>
+    <strong>98%</strong>
+    <span>Kepuasan</span>
+  </div>
+
+  <div>
+    <strong>Rp2.5jt</strong>
+    <span>Total Pengeluaran</span>
+  </div>
+</div>
+    <span class="history-status complete">
+  Selesai
+</span>
+      <section class="history-section">
+        <div id="orderHistory" class="history-list">
+          <article class="history-card">
+            <div>
+              <strong>Servis AC - Budi Wijaya</strong>
+              <p>15 Juni 2026 • Selesai</p>
+            </div>
+            <span>Rp 215.000</span>
+          </article>
+          <article class="history-card">
+            <div>
+              <strong>Perbaikan Listrik - Dewi Larasati</strong>
+              <p>10 Juni 2026 • Selesai</p>
+            </div>
+            <span>Rp 105.000</span>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section id="account" class="screen" data-screen="account">
+      <header class="simple-header"><h1>Profil</h1></header>
+      <article class="account-card">
+        <div class="profile-hero">
+          <div class="profile-avatar">
+           CN
+            </div>
+          <h2>Customer Name</h2>
+          <button type="button">Edit Profil</button>
+        </div>
+
+        <div class="profile-menu">
+          <button>👤 Edit Profil</button>
+          <button>📍 Alamat Saya</button>
+          <button>💳 Metode Pembayaran</button>
+          <button>🛡️ Bantuan</button>
+          <button>🚪 Logout</button>
+        </div>
+
+      </article>
+    </section>
+
+
+    <nav class="bottom-nav" aria-label="Navigasi utama">
+      <button class="nav-item active" data-nav-target="home" type="button"><span>🏠</span>Home</button>
+      <button class="nav-item" data-nav-target="search" type="button"><span>🔍</span>Search</button>
+      <button class="nav-item" data-nav-target="orders" type="button"><span>🛠️</span>Order</button>
+      <button class="nav-item" data-nav-target="history" type="button"><span>📋</span>History</button>
+      <button class="nav-item" data-nav-target="account" type="button"><span>👤</span>Profile</button>
+    </nav>
+
+    <div id="toast" class="toast" role="status">Booking berhasil! Mengalihkan ke pesanan aktif...</div>
+  </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
