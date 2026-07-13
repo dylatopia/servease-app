@@ -1,4 +1,7 @@
 # SERVEASE — Verified Home Service Booking Platform (Prototype)
+> Built with AI-assisted tools and customized by the author.
+> A front-end prototype developed for a university business case project.
+
 
 **Live prototype:** https://servease-app.netlify.app/
 
