@@ -42,7 +42,7 @@ Built as a front-end prototype using HTML, CSS, and JavaScript, hosted on Netlif
 
 ## Project Team
 
-Developed as a group project (SB-IPB): Business Analysis, Market Research, Product Development, Business Strategy, and Validation & Project Coordination roles.
+Developed as a University group project: Business Analysis, Market Research, Product Development, Business Strategy, and Validation & Project Coordination roles.
 
 ## What This Project Demonstrates
 
