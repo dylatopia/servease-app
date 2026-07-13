@@ -34,7 +34,9 @@ I led the business model design (Lean Canvas) and designed and built the mobile 
 
 ## Tech Stack
 
-Built as a front-end prototype using HTML, CSS, and JavaScript, hosted on Netlify. This is a UI/UX and business-model prototype — it demonstrates the intended user flow and interface but is not yet connected to a backend, database, or payment system.
+Built using AI-assisted development tools (prompt-based / "vibe coding") for the initial structure, then customized manually — adjusting layout, 
+colors, data, and flow logic — to match the app's design and UX requirements. 
+Front-end only: HTML, CSS, JavaScript, hosted on Netlify. This is a UI/UX and business-model prototype — it demonstrates the intended user flow and  interface but is not yet connected to a backend, database, or payment system.
 
 ## Status
 
